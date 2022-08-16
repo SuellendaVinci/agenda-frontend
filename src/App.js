@@ -8,12 +8,11 @@ function App() {
     axios
       .get("http://localhost:3333/contacts")
       .then((resp) => {
-        console.log(resp);
+        setText(resp.data[0].city);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        console.log(error);
       });
-    setText("oi, mundo!");
   }, []);
 
   return <div>{text}</div>;
