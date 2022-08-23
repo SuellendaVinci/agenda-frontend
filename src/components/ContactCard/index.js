@@ -1,10 +1,13 @@
+import { Container, NameStyled } from './styled';
+
+
 const ContactCard = ({name, city, state}) => {
     return(
-        <div>
-            <div>{name}</div>
-            <div>{city}</div>
-            <div>{state}</div>
-        </div>
+        <Container>
+            <NameStyled>{name}</NameStyled>
+            <NameStyled>{city}</NameStyled>
+            <NameStyled>{state}</NameStyled>
+        </Container>
     )
 }
 
